@@ -17,4 +17,8 @@ class VisitorsController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :phone, :password)
   end
+
+  def client_token
+    @client_token ||= Braintree::ClientToken.generate
+  end
 end
