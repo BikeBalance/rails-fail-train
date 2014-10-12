@@ -2,6 +2,7 @@ class VisitorsController < ApplicationController
 
   def index
     @user = User.new
+    @client_token = Braintree::ClientToken.generate
   end
 
   def new
@@ -23,7 +24,4 @@ class VisitorsController < ApplicationController
     params.require(:user).permit(:email, :phone, :password)
   end
 
-  def client_token
-    @client_token ||= Braintree::ClientToken.generate
-  end
 end
