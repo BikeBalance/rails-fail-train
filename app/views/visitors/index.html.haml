@@ -196,15 +196,14 @@
             %p More blah blah
             %h2 We're still in development!
             %p.lead Get an email when we launch!
-            -# = bootstrap_form_for(@user) do |f|
-            -#   = f.email_field :email, hide_label: :true,
-            -#     placeholder: "We need your email to identify you - we'll never send you mail"
-            -#   = f.telephone_field :phone, hide_label: :true,
-            -#     placeholder: "We'll need your phone number for verification"
-            -#   = f.password_field :password, hide_label: :true,
-            -#     placeholder: "Password please"
-            -#   = f.submit "Sign up"
-
+            = bootstrap_form_for(@user) do |f|
+              = f.email_field :email, hide_label: :true,
+                placeholder: "Email"
+              = f.telephone_field :phone, hide_label: :true,
+                placeholder: "Mobile number"
+              = f.password_field :password, hide_label: :true,
+                placeholder: "Password"
+              = f.submit "Sign up"
         .mastfoot
           .inner
             %p <3
