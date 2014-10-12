@@ -5,14 +5,15 @@ ruby '2.1.3'
 # Load environment variables from .env in development before other gems init.
 gem 'dotenv-rails', groups: [:development, :test]
 
+# gem 'font-awesome-rails'
 # gem 'jbuilder', '~> 2.0'
+# gem 'jquery-easing-rails'
 gem 'bootstrap-sass'
 gem 'bootstrap_form'
 gem 'braintree'
 gem 'coffee-rails', '~> 4.0.0'
-# gem 'font-awesome-rails'
+gem 'devise'
 gem 'haml-rails'
-# gem 'jquery-easing-rails'
 gem 'jquery-rails'
 gem 'pundit'
 gem 'rails', '4.1.6'
